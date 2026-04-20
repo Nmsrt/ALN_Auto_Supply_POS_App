@@ -39,7 +39,10 @@ Make sure you have Python installed (3.10 or newer should be fine).
 
 Open the folder in terminal or command prompt, then run:
 
+```bash
 python main.py
+```
+
 
 ## Notes
 
