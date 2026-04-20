@@ -17,7 +17,7 @@ Products are stored in a local SQLite database. You can manage them through the 
 Access to this is protected by an admin code.
 
 Default admin code:
-1234
+`1234`
 
 You can change this later in `settings.json`.
 
