@@ -8,9 +8,9 @@
 <p><em>A simple desktop point-of-sale app for ALN Auto Supply — built with Python and Tkinter for fast, straightforward cashier operations.</em></p>
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/Nmsrt/aln-auto-supply-pos/releases)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Nmsrt/aln-auto-supply-pos/ci.yml?branch=main)](https://github.com/Nmsrt/aln-auto-supply-pos/actions)
-[![Issues](https://img.shields.io/github/issues/Nmsrt/aln-auto-supply-pos)](https://github.com/Nmsrt/aln-auto-supply-pos/issues)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App/releases)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Nmsrt/ALN_Auto_Supply_POS_App/ci.yml?branch=main)](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App/actions)
+[![Issues](https://img.shields.io/github/issues/Nmsrt/aln-auto-supply-pos)](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 </div>
@@ -154,7 +154,7 @@ This project is open-source and available for personal use and inspiration.
 
 **Neo Monserrat** — neo.monserrat@gmail.com
 
-Project Link: [https://github.com/Nmsrt/aln-auto-supply-pos](https://github.com/Nmsrt/aln-auto-supply-pos)
+Project Link: [https://github.com/Nmsrt/aln-auto-supply-pos](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App)
 
 ---
 
