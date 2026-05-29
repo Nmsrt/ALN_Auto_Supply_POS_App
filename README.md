@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App/releases)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/Nmsrt/ALN_Auto_Supply_POS_App/ci.yml?branch=main)](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App/actions)
-[![Issues](https://img.shields.io/github/issues/Nmsrt/aln-auto-supply-pos)](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App/issues)
+[![Issues](https://img.shields.io/github/issues/Nmsrt/ALN_Auto_Supply_POS_App)](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 </div>
