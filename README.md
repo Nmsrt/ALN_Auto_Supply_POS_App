@@ -1,52 +1,163 @@
-# ALN Auto Supply POS
+<div align="center">
 
-This is a simple desktop POS app for ALN Auto Supply. It’s built using Python (Tkinter) and is meant to handle basic cashier operations like adding products, generating receipts, and keeping track of sales.
+<!-- Replace with your project logo or banner -->
+<img src="https://via.placeholder.com/120x120.png?text=LOGO" alt="Project Logo" width="120" height="120" />
 
-## What it can do
+<h1>ALN Auto Supply POS</h1>
 
-You can browse your product list, add items to a cart, and complete a sale. The app automatically computes the subtotal, applies any discount, and calculates the change based on the cash entered.
+<p><em>A simple desktop point-of-sale app for ALN Auto Supply — built with Python and Tkinter for fast, straightforward cashier operations.</em></p>
 
-Each completed transaction generates a receipt with a unique receipt number. A text copy of that receipt is saved in the `receipts` folder.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/Nmsrt/aln-auto-supply-pos/releases)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Nmsrt/aln-auto-supply-pos/ci.yml?branch=main)](https://github.com/Nmsrt/aln-auto-supply-pos/actions)
+[![Issues](https://img.shields.io/github/issues/Nmsrt/aln-auto-supply-pos)](https://github.com/Nmsrt/aln-auto-supply-pos/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-There’s also a built-in receipt history viewer where you can open and review past transactions.
+</div>
 
-## Product management
+---
 
-Products are stored in a local SQLite database. You can manage them through the admin panel — add new items, update prices, or remove products.
+## Table of Contents
 
-Access to this is protected by an admin code.
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Product Management](#product-management)
+- [Data Storage](#data-storage)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Contact](#contact)
 
-Default admin code:
-`1234`
+---
 
-You can change this later in `settings.json`.
+## Overview
 
-## Data storage
+ALN Auto Supply POS is a lightweight desktop application designed to handle basic cashier operations for a small auto supply store. It covers the full sales flow — browsing products, building a cart, applying discounts, computing change, and generating receipts — with no external libraries required.
 
-The app stores data in a few places:
+The app is intentionally simple so it's easy to understand, maintain, and extend.
 
-- `aln_auto_supply.db` → main database (products + receipts)
-- `transactions.csv` → log of all completed sales
-- `receipts/` → text copies of receipts
+---
 
-For the CSV:
-- each item in a transaction is saved as its own row  
-- this makes it easier to filter and analyze in Excel or Google Sheets  
+## Features
 
-## How to run
+- ✅ **Cart & checkout** — Browse products, add items to a cart, and complete sales with automatic subtotal, discount, and change computation.
+- ✅ **Receipt generation** — Each transaction produces a uniquely numbered receipt, saved as a plain text file in the `receipts/` folder.
+- ✅ **Receipt history viewer** — Built-in viewer for opening and reviewing past transactions.
+- ✅ **Product management** — Admin panel for adding, updating, and removing products from the local database.
+- ✅ **Sales logging** — All completed transactions are logged to `transactions.csv` for easy analysis in Excel or Google Sheets.
+- ✅ **No external libraries** — Runs on a plain Python installation; nothing extra to install.
+- 🔜 **Thermal printer support** — Receipts are saved as plain text to make future printer integration straightforward.
 
-Make sure you have Python installed (3.10 or newer should be fine).
+---
 
-Open the folder in terminal or command prompt, then run:
+## Tech Stack
 
-```bash
-python main.py
+| Layer | Technology |
+|---|---|
+| Language | [Python 3.10+](https://www.python.org/) |
+| GUI | [Tkinter](https://docs.python.org/3/library/tkinter.html) (built-in) |
+| Database | [SQLite](https://www.sqlite.org/) (via `sqlite3`, built-in) |
+| Config | `settings.json` |
+| Sales Log | CSV (`transactions.csv`) |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Python](https://www.python.org/downloads/) `>= 3.10`
+- No external packages required — all libraries used are part of Python's standard library.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Nmsrt/aln-auto-supply-pos.git
+   cd aln-auto-supply-pos
+   ```
+
+2. **Run the app:**
+   ```bash
+   python main.py
+   ```
+
+That's it — no `pip install` needed.
+
+---
+
+## Usage
+
+On launch, the app opens the cashier interface. From there you can:
+
+1. Browse the product list and add items to the cart.
+2. Enter the cash amount — subtotal, discount, and change are computed automatically.
+3. Complete the sale to generate and save a receipt.
+4. Use the receipt history viewer to look up any past transaction.
+
+---
+
+## Product Management
+
+Products are stored in a local SQLite database (`aln_auto_supply.db`) and managed through the built-in admin panel, which allows you to add new items, update prices, and remove products.
+
+> ⚠️ **Access to the admin panel is protected by an admin code.**
+
+| Setting | Default |
+|---|---|
+| Default admin code | `1234` |
+| Config file | `settings.json` |
+
+It's recommended to change the default admin code after first launch by editing `settings.json`.
+
+---
+
+## Data Storage
+
+The app stores data across three locations:
+
+| Location | Contents |
+|---|---|
+| `aln_auto_supply.db` | Main SQLite database — products and receipt records |
+| `transactions.csv` | Log of all completed sales; one row per line item |
+| `receipts/` | Plain text copies of generated receipts |
+
+The CSV format stores each item in a transaction as its own row, making it straightforward to filter, sort, and analyze in Excel or Google Sheets.
+
+---
+
+## Project Structure
+
+```
+aln-auto-supply-pos/
+├── receipts/                 # Auto-generated text receipts
+├── main.py                   # App entry point
+├── aln_auto_supply.db        # SQLite database (auto-created on first run)
+├── transactions.csv          # Sales log (auto-created on first sale)
+├── settings.json             # App configuration (admin code, preferences)
+└── README.md
 ```
 
+---
 
-## Notes
+## License
 
-This app is intentionally simple so it’s easy to modify later.  
-It doesn’t require any external libraries.
+This project is open-source and available for personal use and inspiration.
 
-Receipts are saved as plain text for now, which makes it easier to adapt later if you want to connect a thermal receipt printer.
+---
+
+## Contact
+
+**Neo Monserrat** — neo.monserrat@gmail.com
+
+Project Link: [https://github.com/Nmsrt/aln-auto-supply-pos](https://github.com/Nmsrt/aln-auto-supply-pos)
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/Nmsrt">Nmsrt</a></sub>
+</div>
