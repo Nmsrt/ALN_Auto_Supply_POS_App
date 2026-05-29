@@ -154,7 +154,7 @@ This project is open-source and available for personal use and inspiration.
 
 **Neo Monserrat** — neo.monserrat@gmail.com
 
-Project Link: [https://github.com/Nmsrt/aln-auto-supply-pos](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App)
+Project Link: [https://github.com/Nmsrt/ALN_Auto_Supply_POS_App](https://github.com/Nmsrt/ALN_Auto_Supply_POS_App)
 
 ---
 
